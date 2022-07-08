@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Zac's Blog</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="../../components/stylesheet.css">
+    </head>
+    <body>
+        <nav class="home">
+            <a href="../../index.html">Take me home!</a>
+        </nav>
+        <header>
+            <h1>Beginnings of a noob developer</h1>
+        </header>
+        <hr>
+        <section>
+            <p class="tldr">
+                <strong>TLDR: </strong>
+                Admins create a ballot and assign students to the ballot. A student logs on. 
+                They see the ballots they haven’t voted for. 
+                For each ballot, they choose their candidates, submitting their vote which is tallied up for the final result.
+            </p>
+        </section>
+        <h3>* * * * *</h3>
+        <section>
+            <h2>
+                The Project
+            </h2>
+            <p>
+                This is the stack I worked with - Bootstrap & Jquery to make the front look nice, PHP for server side rendering and an SQL server to store the data. 
+                When I started this project, I had a sense of what they each did - but I was not confident enough to start creating a web app from scratch. 
+                HTML and CSS were foreign to me - the last time I had used them was for a computer science class in year 8, which I had evidently not focused enough (I had no clue how much it would’ve helped now), but after a bit of playing around with some static sites, I had gotten to a point where I knew enough to start the project.
+            </p>
+            <h3>PLOT TWIST - I did not 😅</h3>
+            <p>
+                I’ll admit - I have a tendency to run headfirst into problems, bug fixing every now and again but since all my previous projects were done for passion, rather than as an product, planning is not a number one goal. 
+                Neatness and organisation of my code was nearly not as important as getting it working (which I could most of the time), but it usually ended up as a bunch of tightly linked dependent code, where a small change would result in a crash. 
+                <br>
+                A different mindset was required - one where tidiness was prioritised as much as getting the job done. My approach, which would begin with a small mess in one area of code which would slowly encompass the project - eventually leading to a time where less progress would be achieved by continuing to work on features instead of taking a step back and refactoring the project.
+            </p>
+            <p>
+                Note: I do suppose that there's no good time to start a project - it's quite hard to pinpoint a time when you can say "I'm now good enough to start".
+                Better to start and realise you messed up than to never start at all.
+            </p>
+        </section>
+        <figure>
+            <img src="./photos/first_student_landing.png">
+            <figcaption>Figure 1. The first iteration of the student site<figcaption>
+        </figure>
+        <section>
+            <p>I’ve gone through my github history and downloaded the first commit to the repository - what a throwback it is to see how far I’ve come.
+                 This is still a .html file - static, without any PHP. I was testing out the features of bootstrap and how I could use them in my project.
+                 I realise the name and date don’t even make sense - at least I’ve got something working at this point (laughing at myself 😂 that I pushed this without decent test variables - the reviewer probably wondered if I had gone crazy). 
+            </p>
+        </section>
+
+        <figure>
+            <img src="./photos/first_admin.png">
+            <figcaption>Figure 2. The admin site<figcaption>
+        </figure>
+
+        <section>
+            <p>
+                At least this one has decent placeholders. 
+                The manage and view ballots weren’t working at this time - I had just figured out what HTML forms were and how they worked with PHP. 
+                While this iteration is rather crude, it served the basis of the project. 
+                I’d done the correct step of seperating my front-end and functions, with a single utils.php file that all my functions lived in.
+                A week later, I’d worked out to connect to an sql server from PHP so that I could read and create ballots from the browser.
+            </p>
+        </section>
+
+        <figure>
+            <img src="./photos/first_studing_voting.png">
+            <figcaption>
+                Figure 3. The student voting site, with dummy people
+            <figcaption>
+        </figure>
+
+        <section>
+            <p>
+                This is 2 weeks after the first commit. 
+                After clicking on one of the ballots (figure 1), it would take you to the voting page. 
+                A picture of Bob would pop up for each candidate, with their individual captions underneath their picture. 
+            </p>
+        </section>
+        <figure>
+            <img src="./photos/first_admin_panel.png">
+            <figcaption>
+                Figure 4. Admin control panel - Admins are able to add candidates, albeit once at a time
+            <figcaption>
+        </figure>
+        <h3>* * * * *</h3>
+        <h3>Skipping foward around 2 months - this was the state of the app before my exams started. </h3>
+        <div>
+            <figure>
+                <img src="./photos/second_student.png">
+                <figcaption>
+                    Figure 5. Student landing page - The student landing page gives more information to the user, in a neater succint fashion. 
+                <figcaption>
+            </figure>
+            <figure>
+                <img src="./photos/second_student_voting.png">
+                <figcaption>
+                    Figure 6. The student voting page
+                <figcaption>
+            </figure>
+            <figure>
+                <img src="./photos/second_admin_ballot.png">
+                <figcaption>
+                    Figure 7. Admin Ballot stats
+                <figcaption>
+            </figure>
+            <figure >
+                <img src="./photos/second_admin_management.png">
+                <figcaption>
+                    Figure 8. Ballot Viewer Page
+                <figcaption>
+            </figure>
+            <figure>
+                <img src="./photos/second_admin_creation.png">
+                <figcaption>
+                    Figure 9. Ballot creation page
+                <figcaption>
+            </figure>
+        </div>
+        <section>
+            <p>
+                Once my exams had finished I went in to the office to work more closely with my manager, I had to upload all my files to their servers and connect to their student database for the photos and names. 
+                At this point, I did not realise how much more work was needed to be done.
+            </p>
+        </section>
+         
+        <footer>
+            <hr>
+            <a href="../../index.html">Take me home!</a>
+            <a href="./review.html">The Review</a>  
+        </footer>
+    </body>
+</html>
