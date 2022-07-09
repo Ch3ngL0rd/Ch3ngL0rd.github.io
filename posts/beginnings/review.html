@@ -12,8 +12,86 @@
         </nav>
         <header>
             <h1>Beginnings of a noob developer</h1>
+            <h2>The Good, The Bad, The Ugly</h2>
         </header>
-
+        <hr>
+        <section>
+            <h2>The Good ☺️</h2>
+            <p>
+                So what went well? Sometimes I find it hard to give myself credit but here goes. I’m proud of how the end product looks - but there are just so many small improvements that could’ve been made to really polish it off. 
+                I’m happy with how I communicated my progress to my manager - since I worked remotely I gave weekly / daily updates about what I did that day which I think worked pretty well.
+            </p>
+            <p>
+                During the ‘final sprint’, where I came into the office to work more closely with the database & systems guy, my proficiency in PHP was good enough where a feature could be requested and implemented by the end of the day. 
+                It felt good to be able to show my accomplishments and prove that I was capable to complete the project (imposter syndrome alert 😅). 
+                Commmunicating to make the front-end more accesible was a fun challenge where I had to make changes to the css on the fly (might’ve contributed to the mess of code). 
+            </p>
+            <p>
+                I had lots of fun researching the inner workings of SQLite and the optimisations that I could do to speed up my queries (found a error where I saved picture with 30% more space than required - not an error but ‘technical debt’ per se - I knew it could be improved at the time but I was working on getting it functional first 😂).
+                The ‘final sprint’ of the last weeks where the project began to look more like a website rather than lines of code was really rewarding, and I’d love to experience it again.
+            </p>
+        </section>
+        <h2>* * * * *</h2>
+        <section>
+            <h2>The BAD 😤</h2>
+            <p>
+                Now onto the bad. There are so many things I could talk about but I’ll try to keep it brief.
+            </p>
+            <p>
+                <strong>Structure</strong> - The way that I’ve thought about this is that I tried to build good code on top of bad code, but the bad code kept bringing the good code down with it. 
+                I imagine one of those jenga towers where all the bottom blocks have been taken out, while you’re trying to build eiffel tower on top - it just ain’t gon work! 
+                Giving myself a planned structure of what functionalities were going to live where at the start of the project would have made my life so much easier. 
+            </p>
+            <p>
+                <strong>Database Shortcuts</strong> (they weren't shortcuts) - Storing the houses and year groups as a comma seperated string instead of creating individual records or linking it to another table - this gave me troubles when the year groups where ’11’ and ‘1’, since (as far as I know) there’s no way to split a string using sqlite. 
+                Instead I had recheck the results in PHP to ensure that they were right (increasing the mess)
+            </p>
+            <p>
+                <strong>Inconsistency of CSS</strong> - I used bootstrap but I also used my own custom css (not bad), but then I used inline css on top of that. 
+                It resulted in alot of repeated code and struggling to find what was causing pixel misalignment - bootstrap, css file or inline..? - it just resulted in alot of wasted time
+            </p>
+            <p>And some non-code stuff that I thought was pretty relevant as well:</p>
+            <p>
+                <strong>Giving deadlines</strong> - at the start of the project I thought that I’d be able to have this done in a month (that was when I did not even know PHP - curse my hubris). 
+                Whenever I gave a deadline to which I’d finish the project, the features would be ~75% complete if that. This is a skill that I will have to work on.
+            </p>
+            <p>
+                <strong>The developer mindset</strong> - The developer mindset is good when the essential and groundwork of the app is created. 
+                However, when the user experience was being considered, I’d found it hard to pick out the pain points, since I’d been working on it for so long. 
+                The features I thought were intuitive were only to me (I had created them after all). 
+                Having a second set of eyes to look at the website from a user was a really enlightening experience.
+            </p>
+        </section>
+        <section>
+            <h2><strike>The Ugly?</strike></h2>
+            <p>
+                Scrap that, I don’t think that I should dig into myself too much. Time to reflect and reward myself for what I’ve accomplished. In 3 months, I have:
+            </p>
+            <ol>
+                <li>Delivered a efficent, functional voting platform which ticks off all the requirements that they requested</li>
+                <li>Learnt a few new languages and become semi fluent in them</li>
+                <li>Have a deeper understanding of how websites work and the work required that goes into creating them</li>
+            </ol>
+        </section>
+        <section>
+            <h2>The Best! 🥳</h2>
+            <p>
+                This project has given me a new idea - and I can’t wait to start creating it (maybe this time I'll plan it out 😂)
+        </section>
+        <section>
+            <h2>Takeaways</h2>
+            <ol>
+                <li>Taking time to think the long-term design of a project is time never wasted. While I did plan (and thought that I’d planned enough) having an extensive fully thought out plan of - I realise writing this that with this mindset I would probably never start anything (it is very easier to keep planning and never doing). Planning is still very useful!</li>
+                <br>
+                <li>Structure and neatness - writing code that is neat and gets the job done is far, far superior to code that just gets the code done. There were some times where I came back to my code (with a fresh set of eyes) and had no clue what a chunk of code did (even though I wrote it like the night b4).</li>
+            </ol>
+        </section>
+        <section>
+            <p>
+                That's it for now. Hope you enjoyed my rambling and reflection on my first job as developer.
+                I thoroughly enjoyed the development experience - working with people to create something that saves times and people enjoy using has been rewarding.
+            </p>
+        </section>
         <footer>
             <hr>
             <a href="../../index.html">Take me home!</a>
