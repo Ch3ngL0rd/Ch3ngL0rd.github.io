@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="./components/stylesheet.css">
         <meta name="google-site-verification" content="bnqwWPObQLb4ZyRnhXXcipVFmRM_3pK4WBlGi7I6628" />
+        <!-- <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script> -->
     </head>
     <body>
         <header>
@@ -24,5 +25,96 @@
                 </dd>
             </dl>
         </section>
+        <hr>
+        <section>
+            <h3>Interests</h3>
+        </section>
+        <hr>
+        <section>
+            <h3>Visitors in the past month</h3>
+            <p id="visitors"></p>
+        </section>
+        <section>
+            <p id="errors"></p>
+            <form action="#">
+                <p>Add your name to the logs! 😁 (at least 5 characters)</p>
+                <label for="name">Name</label>
+                <br>
+                <input type="text" id="name" name="name">
+                <br>
+                <button type="button" onClick="add_visitor()">Add me!</button>
+            </form>
+        </section>
+        <footer>
+            Powered By Firebase Realtime Database
+        </footer>
+        <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            var added = false;
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyAPht3FivjtWeQGyqpY7L8JxTIIsIDkaFE",
+                authDomain: "zacsblog-b812d.firebaseapp.com",
+                databaseURL: "https://zacsblog-b812d-default-rtdb.asia-southeast1.firebasedatabase.app",
+                projectId: "zacsblog-b812d",
+                storageBucket: "zacsblog-b812d.appspot.com",
+                messagingSenderId: "279279979509",
+                appId: "1:279279979509:web:5d73c524918fcf869a2ebc",
+                measurementId: "G-QDF9H88WKQ"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            readFromDatabase()
+
+            function add_visitor() {
+                username = document.getElementById("name").value;
+                document.getElementById("name").value = '';
+                document.getElementById("errors").value = '';
+                if (username.length < 5) {
+                    show_error("Name is too short!");
+                    return;
+                }
+                if (added) {
+                    show_error("Visitor has already been logged!");
+                    return;
+                }
+                added = true;
+                writeToDatabase(username);
+            }
+
+            function writeToDatabase(name) {
+                firebase.database()
+                    .ref("visitors/"+Date.now())
+                    .set({
+                        name: name,
+                    });
+            }
+
+            function readFromDatabase() {
+                console.log('reading!');
+                last = Date.now() - (24*60*60*1000)*30;
+                // last = Date.now() - 60*1000;
+                visitors = document.getElementById('visitors')
+                firebase.database()
+                    .ref("visitors")
+                    .orderByKey()
+                    .startAt(last.toString())
+                    .on('value', (snapshot) => {
+                        names = Object.values(snapshot.val()).map(x => x['name']);
+                        visitors.innerHTML = names.join(', ')
+                    })
+            }
+
+            function show_error(message) {
+                document.getElementById('errors').innerHTML = message;
+                setTimeout(clear_error,5000)
+            }
+            function clear_error() {
+                document.getElementById('errors').innerHTML = ''
+            }
+        </script>
+      
     </body>
 </html>

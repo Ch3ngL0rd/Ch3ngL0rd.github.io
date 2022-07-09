@@ -51,6 +51,11 @@ figure {
     text-align: center;
 }
 
+form {
+    border-style: double;
+    padding: 2vh 2vw 2vh 2vw;
+}
+
 .divflex {
     width: 100vw;
     display: flex;
