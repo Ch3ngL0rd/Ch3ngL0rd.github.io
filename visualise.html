@@ -1,0 +1,2670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+  </head>
+
+  <body>
+    <h3>Insights generated from Ultimate Fried Chicken, Perth</h3>
+    <script>
+      const insights = [
+        {
+          insight:
+            "Tried this for the first time yesterday. The brand is from my country Taiwan. I think as long as it has original 70% flavor it would be great.As you can see in the pictures, I ordered some of theses yesterday, without discussing the food, they didn\u2019t even add seasoning for me..How do we eat food without any seasoning.Tried this for the first time yesterday. The brand is from my country Taiwan. I think as long as it has original 70% flavor it would be great.As you can see in the pictures, I ordered some of theses yesterday, without \u2026More",
+          evidence: [],
+          id: 0,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Tried their popular Ultimate Fried Chicken,  it's was crispy and tender.  Size of the chicken piece is also good. Good variety of chicken items are there.  They serve bubble tea as well.  Customer service is not bad .",
+          evidence: [],
+          id: 1,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "To be honest, I always come here whenever I hang around in the city. Tonight, we come by to get some sweet potato chips and the octopus balls and we had to wait for 25mins just for those two items without any apologise. The service was very bad - the two girls serving were obviously showing bad attitude to my friends when they came to order and when they came back around 20mins later to ask about our food after waiting for so long. They weren\u2019t friendly at all not only to us but also to other customers. About food wise, the sweet potato chips was over cooked as can be seen it turns out with a pretty dark color and taste bitter so we can\u2019t even eat them at all. It is very disappointing for me as I have been coming to the place since your first opening date. I expected more than that although it\u2019s just for two simple items or more. For this time, it\u2019s not only a waste of time but also our money - waiting for nothing tonight. Hope you can quickly train your staff well and improve the food quality.To be honest, I always come here whenever I hang around in the city. Tonight, we come by to get some sweet potato chips and the octopus balls and we had to wait for 25mins just for those two items without any apologise. The service was very \u2026More",
+          evidence: [],
+          id: 2,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "It\u2019s nice, but it\u2019s too many flour outside.Beside, I ordered an non-spicy fire chicken, it still so spicy \ud83e\udd23 be careful if you couldn\u2019t taste any spicy food.",
+          evidence: [],
+          id: 3,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Probably the best taiwanese fried chicken/fried chicken I\u2019ve had in Perth. Complex flavors and cooked to perfection. Great service too. Can\u2019t wait to get this box again for our next get together. What a treat!",
+          evidence: [],
+          id: 4,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Couldn\u2019t find the store at Conventry on google, so I\u2019ll leave the review here. Food was good\u2026 but the service\u2026. The service was magnificent. The young Asian gentleman with the small eyes and outstanding physique, had the most amazing and gentle soul. He had the smile of an angel, he offered to deliver the food to my house, without charge - providing I \u201cpay him by another service\u201d not sure what that means but we need more workers like this!!! He also slipped me a paper with his phone number, just incase I have any queries about my order after hours. 10 out of 10 would cum again.Couldn\u2019t find the store at Conventry on google, so I\u2019ll leave the review here. Food was good\u2026 but the service\u2026. The service was magnificent. The young Asian gentleman with the small eyes and outstanding physique, had the most amazing and \u2026More",
+          evidence: [],
+          id: 5,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Reminded me of Hotstar Fried Chicken which is unfortunately closed now and also was a Taiwanese Halal Restaurant. Bubble Tea was okay flavour (We ordered Passion fruit, Lychee and Mango). On the main dish we ordered Drumstick (8 pcs), Chicken Pop Corn, Chicken Wings (16 pcs) and Fried Tofu. Lots of MSG but tasty too. Cost all up was around $70. Nice Customer service. Would be nice if you provide some plates for the dining in customers.Reminded me of Hotstar Fried Chicken which is unfortunately closed now and also was a Taiwanese Halal Restaurant. Bubble Tea was okay flavour (We ordered Passion fruit, Lychee and Mango). On the main dish we ordered Drumstick (8 pcs), \u2026More",
+          evidence: [],
+          id: 6,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Best tender and juiciest fried chicken I've ever had, I'm pretty sure the batter is laced with drugs because the flavour is the most addicting I've ever had.Chips also had amazing flavour.Wait time is a little long but can't expect more from a small store.Customer service is also good, the nice young gentleman gave me tap water multiple times to quench my thirst.Best tender and juiciest fried chicken I've ever had, I'm pretty sure the batter is laced with drugs because the flavour is the most addicting I've ever had. \u2026More",
+          evidence: [],
+          id: 7,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Love chicken by our Asian neighbours and enjoy spicy food this is great. Would give it 4 stars if there service was as good as the food. It took 30 minutes to get for wings. All they have to do is tell you when ordering that it will be awhile.  They seemed more interested in getting the delivery orders out then the in house customers.Love chicken by our Asian neighbours and enjoy spicy food this is great. Would give it 4 stars if there service was as good as the food. It took 30 minutes to get for wings. All they have to do is tell you when ordering that it will be \u2026More",
+          evidence: [],
+          id: 8,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Usually when I order from here it\u2019s great, but I recently ordered ultimate fried chicken and it was not cooked properly and really gooey, my friend went to tell the staff about the gooey chicken and he had said \u201cwe can give you a new one if you would like.\u201d 20 minutes later one of the staff hands a bag to my friend and tells us \u201cnext time we are not allowed to refund or exchange, we only did this because one of the staff is a trainee\u201d like ??? What kind of joke is that. On top of that instead of giving us what we originally ordered we literally received what seems like 3 skinny strips of chicken that was super hard?? Honestly the worst experience I\u2019ve ever received from a takeaway place.Usually when I order from here it\u2019s great, but I recently ordered ultimate fried chicken and it was not cooked properly and really gooey, my friend went to tell the staff about the gooey chicken and he had said \u201cwe can give you a new one if \u2026More",
+          evidence: [],
+          id: 9,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Juiciest nugget (chicken thigh) of chicken I have ever eaten! Was a bit of a wait but was well worth it. Sweet potato chips are amazing and it's nice to wash it all down with a bubble tea. Highly recommended",
+          evidence: [],
+          id: 10,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Ordered curly fries, got straight fries (and cold). Ordered chicken popcorn, got chicken bites - completely different. Ordered little spicy, got my mouth burned from spice (I can eat spicy food/samyang noodle no problem). Used to love this place but they have been an extreme disappointment the past few orders. Quality of the chicken, overall food, and service has gone extremely downhill.Ordered curly fries, got straight fries (and cold). Ordered chicken popcorn, got chicken bites - completely different. Ordered little spicy, got my mouth burned from spice (I can eat spicy food/samyang noodle no problem). Used to love this \u2026More",
+          evidence: [],
+          id: 11,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Delicious fried chicken that you can taste and you will not disappoint with foods from here. There are few flavours you can try with fried chicken. ( I love new orleans flavour)Extra spicy is very    but taste good!\ud83d\udc4dDelicious fried chicken that you can taste and you will not disappoint with foods from here. There are few flavours you can try with fried chicken. ( I love new orleans flavour) \u2026More",
+          evidence: [],
+          id: 12,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Will never come back again for the rude service.The short Asian girl just stared at me and say nothing when I ask politely for just another bag. It felt like I owned you the money.The food is almost as bad as the attitude, I am not sure I am eating the food or the arrogance of.Anyway, will never come back again, and will tell my friends from Uni never come. That\u2019s the price you pay.Will never come back again for the rude service.The short Asian girl just stared at me and say nothing when I ask politely for just another bag. It felt like I owned you the money. \u2026More",
+          evidence: [],
+          id: 13,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "I have been regular customer here since hot star started in Perth. I seen it been through a few managers. Lately there is a new manager and glad that he has clean up the place. My favourite is always the crispy chicken wings, squid rings and definitely the oyster mushroom. Chicken was tasty and service is reasonable and fast. The party pack is great for pinic.I have been regular customer here since hot star started in Perth. I seen it been through a few managers. Lately there is a new manager and glad that he has clean up the place. My favourite is always the crispy chicken wings, squid rings \u2026More",
+          evidence: [],
+          id: 14,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Worst experience ever. I thought I would save them the time by ordering online. I get an sms saying \"we'll let you know when your order is ready for collection\". Fantastic!We also received an estimated time that it would be finished and we rocked up 10 minutes before the ETA.Waiting, waiting! 25 minutes have passed. That's when I went up and asked about my order. All that time it was sitting on the bench.1st of all, I ordered curly fries and we received standard fries. The guy that served me has no f@ks to give. I felt like I was disturbing them just to ask a question. It was the 2nd time and the last time for me. Gives me the opportunity to try 2 pecks down the road.After all that, owners and workers there wouldn't even care about my feedback to be honest. Seems like the type of joint that wouldn't.Food: 5/2\u00a0\u00a0|\u00a0\u00a0Service: 5/1\u00a0\u00a0|\u00a0\u00a0Atmosphere: 5/1Worst experience ever. I thought I would save them the time by ordering online. I get an sms saying \"we'll let you know when your order is ready for collection\". Fantastic! \u2026More",
+          evidence: [],
+          id: 15,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Chicken was super fatty perhaps temp too low to fry. Mushroom tasted off. Was refunded. But overall not great",
+          evidence: [],
+          id: 16,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Really good quality, real Taiwanese flavor.Meat is fresh and tender, the crust is crispy.",
+          evidence: [],
+          id: 17,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Wow, definitely recommend coming here. the chicken breast was so tender and juicy and the seasoning was very nice and spicy. The service is quick but there is not much seating available (~7 chairs outside) and it is quite popular. Will definitely stop by if I'm in Northbridge :)",
+          evidence: [],
+          id: 18,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Loooovveee their fried chicken so muchhhh. The main point of their chicken is that they always came out nice and fresh and juicy!! That\u2019s the thing that I loved about it! Except for the sweet potato fries, they\u2019re quite a bit bland and over cooked as it taste bitter. But duh, I still love their food! \u2764\ufe0f\u200d\ud83d\udd25",
+          evidence: [],
+          id: 19,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Great Taiwanese style chicken. Even the cooked breast pieces were juicy and tasty. Not a lot of seating. More of a takeaway place. Definitely recommend!",
+          evidence: [],
+          id: 20,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "First time was great. Second time, it was pretty terrible. There were maybe 2 orders ahead of us so we didn't mind waiting 15 minutes. But we got the food first and had to wait another 15 minutes for a single milk tea. Our food was cold at that point already. To make matters worse, we asked for pearl in our milk tea and even checked a second time. Instead, we got some weird fruit jelly that ruined the milk tea. If you ran out of pearls, tell your customers. Don't slip in some random jelly thinking you'll get away with it.Oh, and when you're handling cash, don't touch the food without washing your hands. That's disgusting.First time was great. Second time, it was pretty terrible. There were maybe 2 orders ahead of us so we didn't mind waiting 15 minutes. But we got the food first and had to wait another 15 minutes for a single milk tea. Our food was cold at \u2026More",
+          evidence: [],
+          id: 21,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "$11 for the tiniest piece of chicken I\u2019ve ever had from this place usually it\u2019s double this size, wouldn\u2019t want to go back again if the portion is this size.",
+          evidence: [],
+          id: 22,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "The chicken takes a while to cook but it was worth it. No dry chicken. Wow. That's a first for Perth. Also the staff were nice! That's also a first for Perth. First timer, will be back!",
+          evidence: [],
+          id: 23,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Excellent customer service by Adin. He hit the griddy. 10/10 service. Food was good will definitely recommend.Food: 5/5\u00a0\u00a0|\u00a0\u00a0Service: 5/5\u00a0\u00a0|\u00a0\u00a0Atmosphere: 5/5 \u2026More",
+          evidence: [],
+          id: 24,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "One of the best bubble tea and fried chicken in Perth city",
+          evidence: [],
+          id: 25,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "\ud83d\ude0b UFC! UFC! Hands down one of the best fried chicken places in the city. Servings are pretty generous. Highly recommended \ud83d\ude01",
+          evidence: [],
+          id: 26,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Insanely good chicken. Makes sense there's always a queue there. Delicious.",
+          evidence: [],
+          id: 27,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Perfect late-night-in-the-city food. Love coming here with my school friends after long hours of study in the State Library - an excellent reward for our ATAR studies.",
+          evidence: [],
+          id: 28,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Took a big bite and almost lost all my teeth. Didn't know there are supposed to be bones in it. And if you are having chicken skin, look out for chicken hair as well.\ud83e\udd22\ud83e\udd2e",
+          evidence: [],
+          id: 29,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight: "Best I\u2019ve ever had. Great portion Vs price",
+          evidence: [],
+          id: 30,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The chicken is nice and yum.. just a-bit pricey.The store itself is very very hot! And there is only 4 seats in the store itself. The workers can be friendlier instead of having a bored poker face \ud83d\ude44.",
+          evidence: [],
+          id: 31,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Any reviews earlier than 2020 will be for Hot-Star, which used to be at this location. For some reason Google has put all the old reviews into Ultimate Chicken - which is a similar shop, but different owner & staff. It was always good value but I think the food is slightly better now. Extra-spicy is the way to go of course.",
+          evidence: [],
+          id: 32,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Let's be honest. The food was so good before the restaurant got renovated. The Taiwanese chicken I know is crispy, juicy, and full of flavor. The first time I tried Ultimate Fried Chicken, it was my expectation, it was crispy, juicy, and spicy in a good way. After the restaurant got renovated, customer service dropped. I remember ordering an extra-spicy fried chicken and waiting for 30 minutes. When I got home, there was no seasoning on it. The server was discouraging the customer with shocking service. Recently, I went to this restaurant, the fried chicken was really bland. Blacklisted.Let's be honest. The food was so good before the restaurant got renovated. The Taiwanese chicken I know is crispy, juicy, and full of flavor. The first time I tried Ultimate Fried Chicken, it was my expectation, it was crispy, juicy, and \u2026More",
+          evidence: [],
+          id: 33,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "I do not know why this is so highly rated? It's probably the worst chicken I have ever had.  Pretty expensive too.",
+          evidence: [],
+          id: 34,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Very tasty, definitely taiwanese style and flavor, you definitely should give it a tryFood: 5/5\u00a0\u00a0|\u00a0\u00a0Service: 5/5\u00a0\u00a0|\u00a0\u00a0Atmosphere: 5/5Recommended dishes\nFried Chicken \u2026More",
+          evidence: [],
+          id: 35,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "So much better than KFC!! So much flavour. I 1000% recommend.  Super affordable too.",
+          evidence: [],
+          id: 36,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "I am new to Perth so I don't go out too often but Ultimate Fried Chicken was strongly recommended to me. I'm glad this was recommended to me by a friend, the chicken was nice, crispy and juicy and the fact they close at 1:00am helped a lot when out with friends. Highly recommended.",
+          evidence: [],
+          id: 37,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The fried chicken always crispy and juicy!I have been there many times and they never let me down!",
+          evidence: [],
+          id: 38,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Love the chicken skin and love the wings .Haven't had anything like it before \ud83e\udd24\ud83e\udd2410/10",
+          evidence: [],
+          id: 39,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The fried chicken is crispy and juicy. The sour plum flavour is my absolute favourite!",
+          evidence: [],
+          id: 40,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Best fried chicken joint in town, hands down! So tasty.Food: 5/5\u00a0\u00a0|\u00a0\u00a0Service: 5/5\u00a0\u00a0|\u00a0\u00a0Atmosphere: 5/5 \u2026More",
+          evidence: [],
+          id: 41,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Chicken is 10/10. Also love their chicken skin and fried mushroom!",
+          evidence: [],
+          id: 42,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Very crispy but salty and unfortunately the ultimate chicken we bought had bones in it. Is that common?",
+          evidence: [],
+          id: 43,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "I first came to Ultimate Fried Chicken a year ago and I love this place. Crispiest chicken ever in Perth. But recent purchases let me down. Today I ordered my order online through Deliveroo and they are disgusting. Squid rings are not even properly cooked. Chicken wings are filled with oil and not crispy at all. Seasoning is the only thing that went well since they are prepared. I can taste the old oil once I give the squid ring the first bite. What is wrong with you guys?I first came to Ultimate Fried Chicken a year ago and I love this place. Crispiest chicken ever in Perth. But recent purchases let me down. Today I ordered my order online through Deliveroo and they are disgusting. Squid rings are not even \u2026More",
+          evidence: [],
+          id: 44,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "The ultimate fried chicken and sweet potato chips were very nice. Super crispy and tender with relatively good proportions. The customer service was great too.",
+          evidence: [],
+          id: 45,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Warm juicy chicken with a bang of flavour.Must check it out!The girl who served me had a beautiful big smile and made me feel welcome.",
+          evidence: [],
+          id: 46,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Great menu and lovely service. Will definitely be back again! :))",
+          evidence: [],
+          id: 47,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Was a big fan of Ultimate chicken, but today is a big drop of expectation. Place order online for a Hot Ultimate Fried Chicken and a Mild chicken ribs. First of all, when I reached the shop to pick up my order, a very unfriendly staff approach me with kind of annoying face. And the worst thing is... both staff working in the shop are NOT WEARING A MASK! Isn't this is illegal? To be honest i will walk away from your store if not because of i had an online order. Then, when i ate the chicken,  the Hot chicken is not hot, and not seasoning well, half of the chicken are tasteless and all seasoning are on another side. But the Mild chicken ribs are way too hot! Did they actually read the order properly? What a disappointing experience today.UPDATEDManagement reply on review to ask for more details, but did not provide any contact details to send them the order detail. Seems like a standard reply to all complaints without any action to be taken.Was a big fan of Ultimate chicken, but today is a big drop of expectation. Place order online for a Hot Ultimate Fried Chicken and a Mild chicken ribs. First of all, when I reached the shop to pick up my order, a very unfriendly staff \u2026More",
+          evidence: [],
+          id: 48,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "The tastiest chicken and delicious drinks! It\u2019s my new favourite place to grab a top quality feed. Highly recommended",
+          evidence: [],
+          id: 49,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Really delicious waffle fries and popcorn chicken. The batter was crispy for both of them, and the flavour was great.The waffle fries were light, crispy, and thickly seasoned.I ordered the popcorn chicken New Orleans style, with the spicy option. I was pleasantly surprised by the great flavour and perfect level of spice.I highly recommend this well priced and cosy place in the CBD.Really delicious waffle fries and popcorn chicken. The batter was crispy for both of them, and the flavour was great. \u2026More",
+          evidence: [],
+          id: 50,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "A picture speaks a thousand words. Flies in food and very nasty owner.****Thats funny hotstar because city of Perth emailed me mentioning that they have enforced fines and improvement notice against you. Also, how do we know the rest of the order wasn\u2019t infested with flies.",
+          evidence: [],
+          id: 51,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "I always come back for the curly fries, legit my favourite. I\u2019m eating some rn as I type this :)",
+          evidence: [],
+          id: 52,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Very Average. The chicken was tasty, hot and fresh. Wait was a little long, but I appreciate they cook-to-order so I'm happy to wait to get fresh food. So why'd I give 2 stars? Well, the attitude of the staff was that poor! they obviously didn't want to be there, and it really showed. No smiles. No \"thank you\" or \"enjoy your meal\" ...it makes me wonder why I chose to spend my money there! Minus 1 star. Also the whole place was dirty, really dirty! \u2026filthy windows (all 2 of them!) filthy uniform on staff, dirty sticky tables out front \u2026makes me wonder about the hygiene level in the kitchen area that isn't visible! Minus 1 star. And lastly, misleading signage\u2026if the chicken bites don't come with a dipping sauce, then don't picture it! or write on the sign 'sauce $2 extra' or maybe even ask \"do you want a sauce for $2?\" \u2026I shouldn't have to go back in and ask for sauce and then have to pay extra, when a tub of sauce is clearly pictured. And for the price of $8.50 I expected a sauce was included. Minus 1 star. All these points may sound quite petty, and yes the chicken, although quite expensive, was okay. But everything else about this place was very sub-par.Very Average. The chicken was tasty, hot and fresh. Wait was a little long, but I appreciate they cook-to-order so I'm happy to wait to get fresh food. So why'd I give 2 stars? Well, the attitude of the staff was that poor! they obviously \u2026More",
+          evidence: [],
+          id: 53,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Chicken Bites are awesome.The Squid is a must.Congratulations UFC team, it's a winnerChicken Bites are awesome.The Squid is a must. \u2026More",
+          evidence: [],
+          id: 54,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Don't complain about the waiting time . The chicken is well worth the wait . My daughters favourite and I'm sure it will become your favourite to . Not dripping with oil like some food outlets .",
+          evidence: [],
+          id: 55,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Very disappointing!!I was a regular customer at UFC but today I had an experience with very unfriendly female staff at the front! She looked so annoyed once I walked in. She was chatting with her friend who is not a staff in the store. I forgot to add toppings in my milk tea order but she looked so unfriendly so I don\u2019t want to bother. My partner still enjoy your chicken wings but I won\u2019t come back to your store again.Very disappointing!!I was a regular customer at UFC but today I had an experience with very unfriendly female staff at the front! She looked so annoyed once I walked in. She was \u2026More",
+          evidence: [],
+          id: 56,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Hands down the best fried chicken I\u2019ve had. Would highly recommend. At the coventry store I was served by a really young handsome man with a half sleeve. If you want recommendations go to that man, he\u2019ll get you sorted",
+          evidence: [],
+          id: 57,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Chicken was cooked well but really weirdly sweet, everything from the curly fries, the waffle fries, the ultimate fried chicken and the chicken bites has way too much sugar mixed in with the batter or the salt. Could only eat a few pieces.",
+          evidence: [],
+          id: 58,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "With the disappearance of Hot Star, it is good to see that the replacement store sells pretty much the same thing, The price hasn't really changed either, and with the current promotion, it is a good sell.Since the store is rebranding, there may be new staff, as I have witnessed on the night of the purchase where the owner appears to be training the employee on how to use the seasoning. Knowing this, the season on my chicken wasn't sufficient, but I am fine with that (since I don't like choking on powder), but others may not be, so hopefully this is addressed for the next visit.The drinks they serve is pretty good too. Not the best in the area, since there are lots of competition, but for the price based on the promotion, it is good.The chicken that we ordered had a good coating around it and the chicken wasn't dry. The size was good, and the additional bag provided to us was good so that our hands and fingers aren't drenched with oil.With the disappearance of Hot Star, it is good to see that the replacement store sells pretty much the same thing, The price hasn't really changed either, and with the current promotion, it is a good sell. \u2026More",
+          evidence: [],
+          id: 59,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "I'm avoiding this place from now on. The workers need to pay attention to Deliveroo machine bruh! As a delivery person, I've been coming to the store seeing my order left untouched, then the worker would get the order and start making it, \"sorry there was a mistake\". You're the mistake. They then ask me to wait 15mins when they had above 20mins before I came. Have some respect to your delivery partners and the online customers bruh.I'm avoiding this place from now on. The workers need to pay attention to Deliveroo machine bruh! As a delivery person, I've been coming to the store seeing my order left untouched, then the worker would get the order and start making it, \u2026More",
+          evidence: [],
+          id: 60,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Delicious fried chicken. I had the popcorn chicken and it was tasty. You can choose the level of spiciness to suit your taste bud.",
+          evidence: [],
+          id: 61,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The chicken is great but the customer service is terrible. I simply asked a question about the price of Combo A and the guy cooking the chicken replied in a aggressive and condescending tone. They were also not wearing masks during the mask mandate. Disappointing since the chicken is great but the customer service is letting them down and turning me off when coming back.The chicken is great but the customer service is terrible. I simply asked a question about the price of Combo A and the guy cooking the chicken replied in a aggressive and condescending tone. They were also not wearing masks during the mask \u2026More",
+          evidence: [],
+          id: 62,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Usually always come here to get food but got some last night and food was terrible. The drinks had tipped in my bag and the order was not what I had got. I went back to ask about the food and get a refund but they was being extremely rude about it saying they can\u2019t magically appear and claimed it wasn\u2019t my food. Definitely would not recommend !!Usually always come here to get food but got some last night and food was terrible. The drinks had tipped in my bag and the order was not what I had got. I went back to ask about the food and get a refund but they was being extremely rude \u2026More",
+          evidence: [],
+          id: 63,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight: "Always come and grab a ultimate chicken. Tastes so good.",
+          evidence: [],
+          id: 64,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "unevenly seasoned, which is quite disappointing for a place that\u2019s supposed to have customisable seasoning. very poor wait time, waited 25 min for 1 popcorn chickenmorley location is better, won\u2019t be returning to this oneunevenly seasoned, which is quite disappointing for a place that\u2019s supposed to have customisable seasoning. very poor wait time, waited 25 min for 1 popcorn chicken \u2026More",
+          evidence: [],
+          id: 65,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "I would like to give 0 stars if possible. Ordered delivery, waited over 2 hours and it's still in processing mode. Attempted to call them several times using 2 phones, they blocked the number which I ordered food with while simply just ignoring the other.  Terrible restaurant and service.",
+          evidence: [],
+          id: 66,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Thought I would get a KFC style box, wow I was so suprise at the price, but I must say quality over quantity. The Honeydew flushes down the ultimate chicken thigh and curly fries. Unfortunately never got asked for sauce would of been so much better hence no five stars. Still was nice and a different take on fast food chicken. (Taiwan).Thought I would get a KFC style box, wow I was so suprise at the price, but I must say quality over quantity. The Honeydew flushes down the ultimate chicken thigh and curly fries. Unfortunately never got asked for sauce would of been so \u2026More",
+          evidence: [],
+          id: 67,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "best fried chicken bites for its price, with decent sized pieces too. grab the sets if you want sides like drinks - its cheaper that way. they seem to continually add more little items to their menu too.",
+          evidence: [],
+          id: 68,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Inhospitable staff. The guy who was cooking in front of the counter didn't acknowledge me even though I already in front of him. It's ok if they didn't greet me bcoz they were busy but the simple response of saying \"wait for a moment\" was non existent. The other staff already looked at me but they just ignored me and it took few moments before they served me.Edit: Thanks for the reply. The food was really good though.Inhospitable staff. The guy who was cooking in front of the counter didn't acknowledge me even though I already in front of him. It's ok if they didn't greet me bcoz they were busy but the simple response of saying \"wait for a moment\" was \u2026More",
+          evidence: [],
+          id: 69,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Got the crispy Fried chicken skin and it was so yummy! Portion is big and super filling, definitely worth checking out",
+          evidence: [],
+          id: 70,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Literal garbage, waited 30 mins for a single piece of chicken for it to be dry with barely any spice on it. Inferior copy to hot stars original chicken, a good waste of time and money wouldn't recommend",
+          evidence: [],
+          id: 71,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "When I first noticed that Hot Star had gone/ become this I was a little disappointed and just never ended up coming here for a while. But, as it turns out, the joke was on me. I actually think this place is a big improvement. The chicken is delicious, with more seasoning options... I really enjoyed the curry seasoning, some awesome Taiwan flavour there. And, to top it all off, the bubble tea which I bought on a bit of whim with the special deal, ended up being one of the best I\u2019ve had in Perth and I\u2019d come back even just for that, even over some of the other nearby options. What\u2019s more is they serve takoyaki, one of my all time favourite snacks, so I will be back to try that. All in all, 10/10, actually really glad to have this place arise out of the ashes.When I first noticed that Hot Star had gone/ become this I was a little disappointed and just never ended up coming here for a while. But, as it turns out, the joke was on me. I actually think this place is a big improvement. The chicken is \u2026More",
+          evidence: [],
+          id: 72,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The fried tofu and squid rings are soo good especially with the seaweed flavour!! The staff are also really nice and friendly. 10/10 recommend.",
+          evidence: [],
+          id: 73,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "It was so good, I\u2019ve never been tried such good fried chicken wings, love it",
+          evidence: [],
+          id: 74,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Food is nice but wait time is long.My last visit took 30mins.So if your on a tight schedule or lunch break like I was, this is not the best place to go for a quick food break during midday.",
+          evidence: [],
+          id: 75,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "We got the ultimate fried chicken spicy. Was absolutely brilliant.Never tried anything else and don\u2019t think I ever will. But the UFC chicken was awesome.Will return for that many times.We got the ultimate fried chicken spicy. Was absolutely brilliant.Never tried anything else and don\u2019t think I ever will. But the UFC chicken was awesome. \u2026More",
+          evidence: [],
+          id: 76,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "tried the cheese fried chicken, was really good and a bonus because they serve halal chicken, definitely will try again.",
+          evidence: [],
+          id: 77,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Best fried chicken and my favourite in Perth. Great and friendly customer service. I've never written a review for a place before but I had to write one for Hot Star just because of how awesome it is. Crispy chicken bites are a must-have and as a spice lover, I am greatly pleased by the levels of spice. Makes me want to travel to Taiwan to try all the Hot Star stores there. I highly recommend the crispy chicken bites, best is extra spicy. Lovely service and cosy store. My favourite go-to for fried chicken for the past 3 years.Best fried chicken and my favourite in Perth. Great and friendly customer service. I've never written a review for a place before but I had to write one for Hot Star just because of how awesome it is. Crispy chicken bites are a must-have \u2026More",
+          evidence: [],
+          id: 78,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "I often go to the store in Northbridge. Their chicken are pretty tasty, fresh, and crispy. Given the hot working condition, the staff are nice. Keep up the good work :-).",
+          evidence: [],
+          id: 79,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Food is good but service was terrible, i suggests your staff to re-training.",
+          evidence: [],
+          id: 80,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Nice place to get some chicken, nice staff and busy at lunch time. Good food",
+          evidence: [],
+          id: 81,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Best fried chicken and my favourite in Perth. Great and friendly customer service. I've never written a review for a place before but I had to write one for Hot Star just because of how awesome it is. Crispy chicken bites are a must-have and as a spice lover, I am greatly pleased by the levels of spice. Makes me want to travel to Taiwan to try all the Hot Star stores there.Best fried chicken and my favourite in Perth. Great and friendly customer service. I've never written a review for a place before but I had to write one for Hot Star just because of how awesome it is. Crispy chicken bites are a must-have \u2026More",
+          evidence: [],
+          id: 82,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "I was expecting good taiwanese street food under the new name. I ordered chicken bites and sweet potatoes chip with drink after 9pm. It wasn\u2019t busy at all but it took them too long. I would say more than 20 mins just for easy fast food. The chicken bites weren\u2019t bites with thick flour, the size bigger than nibbles without basil? It shouldn\u2019t call \u9e7d\u9165\u96de.Two stars for the young friendly staff and the drink was surprisingly good.I was expecting good taiwanese street food under the new name. I ordered chicken bites and sweet potatoes chip with drink after 9pm. It wasn\u2019t busy at all but it took them too long. I would say more than 20 mins just for easy fast food. The \u2026More",
+          evidence: [],
+          id: 83,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "The fried chicken was good. We ordered I breast shared between me and my husband. We are satisfied. The seasoning is delicious.",
+          evidence: [],
+          id: 84,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "My favorite fried chicken !!!I can come every day if I don't look at the numbers on the scale\ud83e\udd24\ud83e\udd24\ud83e\udd24",
+          evidence: [],
+          id: 85,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "We bought a server of popcorn chicken and it was delicious! Nice big serve, enough for both of us for an arvo snack.",
+          evidence: [],
+          id: 86,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: 0,
+        },
+        {
+          insight:
+            "\u201cWhat time are they going?\u201d The male staff said in mandarin.My partner and I were absolutely sorry for you being home late.But just so you know that the business hour stated here is not correct.And the squid rings we ordered were not seasoned.",
+          evidence: [],
+          id: 87,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Best and affordable fried chicken, I love the chicken bites with curly fries with new orleans flavour!",
+          evidence: [],
+          id: 88,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Spicy chicken wings were so yum and juicy and the Bubble Tea complimented the chicken. We had Combo B, good value for money. Definitely will come back.",
+          evidence: [],
+          id: 89,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Waiting time was fairly long considering it was just one piece of chicken. Was super salty (would not recommend salt and pepper flavouring), thought it was boneless but turns out half of it was bone which was disappointing. Went with friends, staff werent consistent in asking what bubble tea toppings we wanted one friend didnt even get asked what flavouring on the chicken he wanted.Waiting time was fairly long considering it was just one piece of chicken. Was super salty (would not recommend salt and pepper flavouring), thought it was boneless but turns out half of it was bone which was disappointing. Went with \u2026More",
+          evidence: [],
+          id: 90,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "The chicken here is amazing. So fresh and delicious (better than KFC) . The bubble tea is delicious, I had the passionfruit. The service the great, very happy and friendly staff.Do yourself a favour and stop through for lunch.The chicken here is amazing. So fresh and delicious (better than KFC) . The bubble tea is delicious, I had the passionfruit. The service the great, very happy and friendly staff. \u2026More",
+          evidence: [],
+          id: 91,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "I ordered 2 bubble tea with out sugar and with pearls and the pearls wear stuck together and it was so hard like rock. Also it was super sweet even with no sugar plus they don\u2019t put the label on our bubble tea. So we don\u2019t know which was passionfruit which was lychee",
+          evidence: [],
+          id: 92,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Ultimate fried chicken is the best place to satisfy fried chicken cravings with their wide range of delicious flavours. Excellent customer service.",
+          evidence: [],
+          id: 93,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "the chicken is good, but never buy bubble tea here. The worst bubble tea ever I have had.",
+          evidence: [],
+          id: 94,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "The food is good , coming here 4 time , only 1 time i meet nice staff, other 3 staff just so unfriendly, never say thanks, just staring at me ,I miss Taiwanese chicken but meh, i will wait shilinh open in perth",
+          evidence: [],
+          id: 95,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "As a fellow member of the hospitality industry for many years now, I've done millions of wings, literally. They're my go to. Quality is second to..(mine, joking) NONE.. SERIOUSLY.put m in ya mouth.. ya mafo'in mouthThey know how often I order... It's for a reason..my kitchen crew will vouch, and fam, and mates.. neighbours.. blah blah.. love being local.Looking forward to the new comings after your refurb UFC \ud83d\ude4fMy love for y'all, keep the dream alive.As a fellow member of the hospitality industry for many years now, I've done millions of wings, literally. They're my go to. Quality is second to..(mine, joking) NONE.. SERIOUSLY. \u2026More",
+          evidence: [],
+          id: 96,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Best fried chicken in Northbridge, took my girlfriend there 2 days ago and she loves it as well!!",
+          evidence: [],
+          id: 97,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Nice chicken. Nice fries. I accidentally handed in the wrong ticket and still got my right food. Nice service.",
+          evidence: [],
+          id: 98,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Great service, friendly staff, chicken was amazing best fried chicken in Perth would definitely recommend if your looking for a quick and tasty lunch.",
+          evidence: [],
+          id: 99,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Great chicken and wide variety of flavours, definite recommendation to anyone wanting a filling snack while walking in Northbridge/Perth City!",
+          evidence: [],
+          id: 100,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Good taste doesn't make up for the bad customer service. We waited at the only table in the shop right in front of the staff, however after 30mins and multiple other customers receiving their orders we decided to inquire about our order. Turns out the staff had forgotten to put our order through. They didn't think to check with us even though we were waiting right in front of them for over 30 minutes. We barely received an apology, and the staff's excuse was \"the order system was not working\". It's not the customer's responsibility to follow up on their order, and the staff had plenty of opportunities to realise that we had not received our order. Very disappointed with the lack of remorse from the staff.Good taste doesn't make up for the bad customer service. We waited at the only table in the shop right in front of the staff, however after 30mins and multiple other customers receiving their orders we decided to inquire about our order. \u2026More",
+          evidence: [],
+          id: 101,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Their chicken is one of the most satisfying in Perth. I always come here and never get sick of itand their plum seasoning is the best! Thank you Ultimate Fried Chicken \ud83d\udd25",
+          evidence: [],
+          id: 102,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Just order their wings, it is super salty and it\u2019s inedible. There goes 7 wings into the bin",
+          evidence: [],
+          id: 103,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Flavours good but used to be better cos quality definitely has dropped recently. Chickens tougher and not as juicy/tender as before?",
+          evidence: [],
+          id: 104,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Have been coming here for a long time, but got the worse customer service from a male staff today, very disappointing. Has made me not want to come back because of his poor service and poor attitude. But food is still on point!!",
+          evidence: [],
+          id: 105,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "really tasty and crunchy chicken \ud83e\udd24really big though, but worth it for the price.",
+          evidence: [],
+          id: 106,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Had the chicken bites (made from chicken breasts). Surprisingly it is very juicy, extremely tasty, will definitely be back for more",
+          evidence: [],
+          id: 107,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The flour batter is so amazing, chicken is well marinated, nice place for street food",
+          evidence: [],
+          id: 108,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "best place to go to to satisfy my crunchy chicken and spice cravings!!! The flavours they use hit the spot",
+          evidence: [],
+          id: 109,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Weekly fried chicken fix, a must try! Good bubble tea too...",
+          evidence: [],
+          id: 110,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "Best fried chicken in Perth <3",
+          evidence: [],
+          id: 111,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Never fail to make wrong order for me on the Takoyaki without mayo - there were two orders so far and i kept saying no mayo when i placed the order. An original long wait of 15-min wait had to become 30-min wait. Nightmare!",
+          evidence: [],
+          id: 112,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight: "The best fastfood franchise in Perth,  awesome taste.",
+          evidence: [],
+          id: 113,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "This the best crumbed chicken I have tasted. For those whole like something different they offer crispy chicken skin",
+          evidence: [],
+          id: 114,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Got you\u2019re wings today it was only thing I\u2019ve eaten today and I got my brothers wedding tomorrow and I\u2019ve been on the hotel toilet bowl all arvo/night.",
+          evidence: [],
+          id: 115,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Chicken was cooked well but that delicious hot dust seemed to be missing something compared to other Hot-Stars I've been too. Nothing wrong I just wanted that \"eff me up\" kick from the extra spicy and it wasn't there.",
+          evidence: [],
+          id: 116,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "The chicken is huge....the staff put a lot of chilli powder lol. The only thing I feel uncomfortable about is the staff didn\u2019t wear gloves when making the chicken at the same time touching the cash machine. and a cockroach was crawling on the wall.......food is good but the shop is not clean",
+          evidence: [],
+          id: 117,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "food is always really good and never dissapointed! very authentic taiwanese chicken and very bussing !!",
+          evidence: [],
+          id: 118,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Beautiful succulent authentic fried chicken that is absolutely irresistible. Have been to the place a couple of times and the food is consistently nice. Highly recommended",
+          evidence: [],
+          id: 119,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "Hot, large and fried. Don't burn your tounge",
+          evidence: [],
+          id: 120,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Pretty good place for fried chicken with a good portion and flavoured seasoning.",
+          evidence: [],
+          id: 121,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The chicken was thinner and less juicy than in Taiwan. The spice mix was less tasty and just basically ridiculous heat without flavour. Disappointing. The chips were quite good though.",
+          evidence: [],
+          id: 122,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Has to be the worst food I have eaten in all of Perth waiting over 1 hour and 45 minutes for food to be delivered with Deliveroo, when it finally arrived it was stone cold tasted sweet when for chicken is not what you want. Please beware before going here or ordering delivery I will not do them the justice of having my custom again",
+          evidence: [],
+          id: 123,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Formerly Hot Star, now Ultimate Fried Chicken continues pumping out delicious food. Love the seasoning they use on the chicken and curly fries",
+          evidence: [],
+          id: 124,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Waiting area is very small and cramped, delicious chicken with uncommon flavor (mild spice is considerably spicy, many options) drinks fridge doesn't have much but does have a nice winter melon tea (canned)",
+          evidence: [],
+          id: 125,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "neutral",
+        },
+        {
+          insight: "The chicken is really good. The shop always busy",
+          evidence: [],
+          id: 126,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "I'm rating this on the food alone. The fried chicken was delicious, but ignore the service. It's a take away fried chicken joint, so don't expect any chit chat. Actually I hate chit chat, so that's a good thing...Bottom line, great chicken.I'm rating this on the food alone. The fried chicken was delicious, but ignore the service. It's a take away fried chicken joint, so don't expect any chit chat. Actually I hate chit chat, so that's a good thing... \u2026More",
+          evidence: [],
+          id: 127,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The worst costumer service, the guy serving today was touching his nose and then touching the food. That\u2019s outrageous. Please don\u2019t go to this restaurant.",
+          evidence: [],
+          id: 128,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Very nice chicken \ud83d\udc4d\ud83c\udffb But unfortunately the staff is not friendly at all , didn\u2019t even say \u201cHello\u201d",
+          evidence: [],
+          id: 129,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Love the chicken here! Really good!After a few more tries, quality and service has dropped. Not sure why.",
+          evidence: [],
+          id: 130,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: 0,
+        },
+        {
+          insight:
+            "Best fried chicken I have ever had but please widen your range for your Morley location for Door Dash! \ud83d\ude0d\ud83d\ude0a",
+          evidence: [],
+          id: 131,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "its good food and open late although the staff sometime too busy  and forget to clean there shop and tables , and forget customer orders  hope to see them improve there customer service in the future",
+          evidence: [],
+          id: 132,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Chicken was completely wet, skin was sliding off it was basically inedible, chips were bomb tho",
+          evidence: [],
+          id: 133,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Ordered a light spicy chicken bites and ultimate fried chicken but was given a hella spicy one. We can't even stomach it in. So much for giving us a choice.",
+          evidence: [],
+          id: 134,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight: "Super authentic Taiwanese fried chicken!",
+          evidence: [],
+          id: 135,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Fried Wings were great, a bit on the pricey side. There is very little place to sit so would recommend takeaway.",
+          evidence: [],
+          id: 136,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "Best fries and chicken was crispy and seasoned well",
+          evidence: [],
+          id: 137,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "What more can i say about William st Hot-Star? My boy behind the fryer/POS is all about getting me to the optimum level of spice & crunch, never afraid to let me know when I'm toeing the line of madness. 10/10 would eat again",
+          evidence: [],
+          id: 138,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Good spot for a great bite. Thoroughly enjoyed the chicken and will go back for more.",
+          evidence: [],
+          id: 139,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "Worth a try! Tried in the freo market",
+          evidence: [],
+          id: 140,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "it\u2018s really delicious. the chicken is really juicy\uff01",
+          evidence: [],
+          id: 141,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Food is great but service from employees is always horrible. They always have an attitude and barely acknowledge customers. The cashier lady probably lied about her customer service on her resume lol",
+          evidence: [],
+          id: 142,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "RUDE customer serviceWaiting for half an hour and was told that the order have collected by others ??So, what\u2019s the POINT of ORDER CODE ??WASTE OF MONEYRUDE customer serviceWaiting for half an hour and was told that the order have collected by others ?? \u2026More",
+          evidence: [],
+          id: 143,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "I highly recommend the crispy chicken bites, best is extra spicy. Lovely service and cosy store. My favourite go-to for fried chicken for the past 3 years.",
+          evidence: [],
+          id: 144,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Not bad but I had better. Crunchy batter moist chicken but hot level underwhelming.",
+          evidence: [],
+          id: 145,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Great food when they change oil regularly. VERY rude service. Today I rang and asked them to read out the ingredients of the flour coating. After being annoyed and rude, the guy hung up on me. Booooooo.",
+          evidence: [],
+          id: 146,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Incredible chicken and the range of sides is so good. Highly recommend the seaweed flavouring!",
+          evidence: [],
+          id: 147,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Love the fried chicken here. So tasty & large pieces of pure chicken goodness! Their spices are fiery too!",
+          evidence: [],
+          id: 148,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "It was quite good \ud83d\ude0aIt reminds  of me being in Taiwan last year \ud83d\ude0e",
+          evidence: [],
+          id: 149,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Best place for yummy sides. The chicken skin is to die for! Curry flavour is the best!!! Good job guys!!! Keep up the good work!",
+          evidence: [],
+          id: 150,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Amazing service. We arrived about 15 mins after close, yet they were happy to serve 5 Hungry boys and even let us dine in. Top service and delicious food.",
+          evidence: [],
+          id: 151,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Very juicy chicken and very good flavour. Beyond my expectation. I order No.1 chicken.",
+          evidence: [],
+          id: 152,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Nice chicken but I'd recommend repeating your order 10 times as saying 'mild spicy' 5 times may still result in a 'spicy' end product",
+          evidence: [],
+          id: 153,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Best fried chicken in Perth. Very similar to Taiwan if not better",
+          evidence: [],
+          id: 154,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Recently discovered this place, hooked on the fried chicken. Delicious. The New Orleans flavour is my favourite!",
+          evidence: [],
+          id: 155,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "A favourite of mine from Hong Kong and now to have it here as well is great.  Tastes a bit different to HK but still a great taste and crispy too.",
+          evidence: [],
+          id: 156,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Love the chicken!but yeah, as someone who works in the kitchen. They should always clean as they go.We can see how dirty it is.Love the chicken!but yeah, as someone who works in the kitchen. They should always clean as they go. \u2026More",
+          evidence: [],
+          id: 157,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Chicken was bussin. I like the mushroom pepper seasoning    Would come here again when im hungry",
+          evidence: [],
+          id: 158,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Always great tasting chicken luv it n first time tried the bubble tea I enjoyed it alot",
+          evidence: [],
+          id: 159,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "Good service, and good prices",
+          evidence: [],
+          id: 160,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "Really well priced, servings were really big",
+          evidence: [],
+          id: 161,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "You\u2019ll say \u201cOh my god\u201d after a bite of the chicken.Because I said that.",
+          evidence: [],
+          id: 162,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Great food, pity the timer on the frier is loud enough to perforate an eardrum. Very disappointed that they now also charge a fee for using a card to pay !!!",
+          evidence: [],
+          id: 163,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Crunchy and juicy at the same time. Definitely coming again. Would reccomend :))",
+          evidence: [],
+          id: 164,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The only downside to this place is that it closes at 11, the new Orleans chicken is a great snack. The spice isn't too hot.",
+          evidence: [],
+          id: 165,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Extremely slow! Slow staff.caused by low standard operation.  2 orders with 4 fillets and some small snacks prepared and fried nearly 20-25 mins.",
+          evidence: [],
+          id: 166,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight: "Juicy chicken wings. Great taste of spice flavours",
+          evidence: [],
+          id: 167,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Food's great.Food: 5/4\u00a0\u00a0|\u00a0\u00a0Service: 5/3\u00a0\u00a0|\u00a0\u00a0Atmosphere: 5/3 \u2026More",
+          evidence: [],
+          id: 168,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Fried chicken was a bit too dried and thin, and the chicken skin was only ok. I was overcharged, not recommended at all.",
+          evidence: [],
+          id: 169,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Staff need to have a better attitude! They were very rude and seemed like they didn\u2019t want to do their job.",
+          evidence: [],
+          id: 170,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "2 hours to receive meal after ordered online arrived cold and unappetising ended up giving it to the dog is was so bad I know a lot of issue was due to Menu log delivery but could of recooked and sent fresh waste of money",
+          evidence: [],
+          id: 171,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight: "Great food! Totally recommend :))",
+          evidence: [],
+          id: 172,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Waited 40mins for 1 piece of fried chicken. It wasn't busy at the time either. Horrible service.",
+          evidence: [],
+          id: 173,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "I've absolutely fallen in love with the fried chicken, so much so that i ensure to drop by every time I'm near at.",
+          evidence: [],
+          id: 174,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "Long wait",
+          evidence: [],
+          id: 175,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Replacement to Hot Star, the quality has definitely improved. If you like fried chicken, this is for you.",
+          evidence: [],
+          id: 176,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The chicken is good and tasty, also the guy working there is friendly and never charged me extra 50cents for card payment.",
+          evidence: [],
+          id: 177,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The chicken is cooked fresh. It's never dry. Always succulent and juicy. Try the fried mushrooms.",
+          evidence: [],
+          id: 178,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The food here are amazing. Amazingly good and amazingly cheap. Although the wait might be a little long but it's definitely worth it",
+          evidence: [],
+          id: 179,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Very tasty fried chicken.  Crispy, chickeny, really everything you can want from a chicken that's fried.",
+          evidence: [],
+          id: 180,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "great service!! super yummy food!",
+          evidence: [],
+          id: 181,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The food is great! but the customer service is very slow, and time consuming",
+          evidence: [],
+          id: 182,
+          level: 0,
+          rating: "Rated 3.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "mixed/negative",
+        },
+        {
+          insight:
+            "Korean fried chicken. Nice n spicy. Recommend the chicken wings.",
+          evidence: [],
+          id: 183,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Good but you wait to cooked fresh price of chicken to order",
+          evidence: [],
+          id: 184,
+          level: 0,
+          rating: "Rated 2.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "neutral",
+        },
+        {
+          insight: "nice location and fresh food, will come again",
+          evidence: [],
+          id: 185,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Halal food with spiciness.Food: 5/5\u00a0\u00a0|\u00a0\u00a0Service: 5/5\u00a0\u00a0|\u00a0\u00a0Atmosphere: 5/5Recommended dishes\nFried Chicken \u2026More",
+          evidence: [],
+          id: 186,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Beautiful feed, and we were well looked after.. all round great experience and very good value",
+          evidence: [],
+          id: 187,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "the chicken bites and the curly fries are the best!",
+          evidence: [],
+          id: 188,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "Amazing drunken feed after a sunday sesh at henry summer",
+          evidence: [],
+          id: 189,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Excellent fried chicken, sweet potato chips are amazing as well as the bubble tea!",
+          evidence: [],
+          id: 190,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Best chicken in town ! Like legit. Although the staff there could be more public friendly!",
+          evidence: [],
+          id: 191,
+          level: 0,
+          rating: "Rated 4.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "I love the #1 fried chicken with a side of mushrooms. Better than KFC!!!",
+          evidence: [],
+          id: 192,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Love the fried chucken, fresh cooked, crutch outside but juicy inside.",
+          evidence: [],
+          id: 193,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "Very delicious. Went back today and got what I wanted.",
+          evidence: [],
+          id: 194,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "I just won't buy it again. Be your own judge.",
+          evidence: [],
+          id: 195,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Chicken was raw . Not good experience .ended up been sick for a week",
+          evidence: [],
+          id: 196,
+          level: 0,
+          rating: "Rated 1.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Not too pricey. Stuffy cramped space while waiting. Delicious chicken!!",
+          evidence: [],
+          id: 197,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Must try the extra hot mushroom and deep fried chicken! Best ever in Perth!",
+          evidence: [],
+          id: 198,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight: "Fish cake is my fav!!!",
+          evidence: [],
+          id: 199,
+          level: 0,
+          rating: "Rated 5.0 out of 5,",
+          num_reviews: "Local Guide\u00b7366 reviews\u00b73,986 photos",
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Great taste but poor customer service can lead to negative reviews and deter customers",
+          evidence: "101,105",
+          id: 200,
+          level: 1,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Consistency in taste and quality is important for customer loyalty",
+          evidence: "102,104,107,114,119",
+          id: 201,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight: "Variety in flavors and options can attract customers",
+          evidence: "100",
+          id: 202,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Cleanliness and hygiene are crucial for maintaining customer trust",
+          evidence: "117",
+          id: 203,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Spice levels should be consistent with customer expectations",
+          evidence: "116",
+          id: 204,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "The fried chicken is consistently praised for its taste and quality.",
+          evidence: "180,183,188,192,193",
+          id: 205,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Service is a key factor in customer satisfaction, both positive and negative.",
+          evidence: "181,182,187",
+          id: 206,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "The menu offers a variety of options, including halal and spicy dishes, to cater to diverse preferences.",
+          evidence: "186,191,198",
+          id: 207,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight: "Freshly cooked food is highly valued by customers.",
+          evidence: "184,185,193",
+          id: 208,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Food safety and quality control should be a top priority to prevent negative experiences.",
+          evidence: "195,196",
+          id: 209,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "The quality of the food is inconsistent and the service can be poor, leading to negative customer experiences.",
+          evidence: "123,128,129,130,132",
+          id: 210,
+          level: 1,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "The seasoning on the chicken is a standout feature and is well-liked by customers.",
+          evidence: "121,124,138",
+          id: 211,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The wait times for food can be long, but the quality of the chicken is worth it for many customers.",
+          evidence: "122,126",
+          id: 212,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The fries are a popular side dish and are often praised by customers.",
+          evidence: "124,137",
+          id: 213,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The spiciness of the chicken can vary greatly and may not match customer preferences.",
+          evidence: "120,134",
+          id: 214,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Inconsistent customer service and mistakes with orders are turning customers away",
+          evidence: "60,62,63",
+          id: 215,
+          level: 1,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "The quality and taste of the fried chicken is generally praised",
+          evidence: "61,64,68,70,71,74,77",
+          id: 216,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight: "Long wait times and slow service are a common issue",
+          evidence: "65,75",
+          id: 217,
+          level: 1,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Some customers appreciate the customizable seasoning options",
+          evidence: "65",
+          id: 218,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Hot Star is known for their crispy chicken bites and friendly staff",
+          evidence: "73,78",
+          id: 219,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The quality of the chicken is a key factor in customer satisfaction.",
+          evidence: "40,41,42,43,44,45,46,47,48,49,52,54,55,57,58",
+          id: 220,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Customer service and staff friendliness have a significant impact on customer experience.",
+          evidence: "41,44,45,47,53,56",
+          id: 221,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Consistency in food quality and customer service is important for retaining customer loyalty.",
+          evidence: "43,44,47,53,56",
+          id: 222,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Cleanliness and hygiene of the restaurant is a concern for some customers.",
+          evidence: "53,59",
+          id: 223,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Some customers find the seasoning or sweetness of the chicken batter to be excessive.",
+          evidence: "42,58",
+          id: 224,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Customers generally enjoy the food and prices, but some are unhappy with the service and wait times.",
+          evidence: "160,161,163,164,165,167,168,172,175,176,178,179",
+          id: 225,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "The chicken is the standout dish, with many customers praising its taste and juiciness.",
+          evidence: "162,164,167,174,178",
+          id: 226,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Some customers have had negative experiences with rude or unhelpful staff.",
+          evidence: "163,169",
+          id: 227,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Wait times can be long, and some customers have complained about their food arriving cold or overcooked.",
+          evidence: "166,171",
+          id: 228,
+          level: 1,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "The business has improved in quality compared to its predecessor, Hot Star.",
+          evidence: "176",
+          id: 229,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The quality of the food is generally praised, with specific recommendations for the crispy chicken bites and the seaweed flavouring.",
+          evidence: "141, 144, 147",
+          id: 230,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Service is a recurring issue, with several customers reporting rude behavior from employees.",
+          evidence: "142, 143, 146",
+          id: 231,
+          level: 1,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "The New Orleans flavour is a customer favorite, but there are some inconsistencies in spice level and flavor across orders.",
+          evidence: "155, 153",
+          id: 232,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "The cleanliness of the kitchen and restaurant is a concern for some customers.",
+          evidence: "157",
+          id: 233,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Despite some issues, the majority of customers enjoy the food and are repeat visitors.",
+          evidence: "140, 149, 151, 152, 154, 158, 159",
+          id: 234,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The quality of customer service is a key factor in customer satisfaction and should be improved",
+          evidence: "80,82,83,95,99",
+          id: 235,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "The food, particularly the fried chicken, is generally considered to be good and delicious",
+          evidence: "81,82,84,85,86,88,89,90,97,98",
+          id: 236,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Waiting times can be long and need improvement to meet customer expectations",
+          evidence: "83,90",
+          id: 237,
+          level: 1,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Inconsistent or poor quality of bubble tea needs improvement",
+          evidence: "92,94",
+          id: 238,
+          level: 1,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "The range of flavors and options for fried chicken is a unique selling point and a key factor in customer satisfaction",
+          evidence: "82,88,93,96",
+          id: 239,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The quality of the chicken can be inconsistent, with some customers experiencing cold or poorly seasoned food",
+          evidence: "21,33",
+          id: 240,
+          level: 1,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "The portion size and price of the chicken is variable, with some customers feeling it is too small or expensive",
+          evidence: "22,31",
+          id: 241,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "The customer service is generally good, with some standout employees receiving high praise",
+          evidence: "23,24",
+          id: 242,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The chicken is highly praised for its taste and texture, with many customers preferring it over other fast food chains",
+          evidence: "20,23,25,26,28,30,35,37,39",
+          id: 243,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The seating area is limited and the temperature inside the store can be uncomfortable, but the restaurant is popular for its late-night hours and convenient location",
+          evidence: "20,28,31,37",
+          id: 244,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Food quality is inconsistent, with some customers experiencing overcooked or undercooked dishes",
+          evidence: "0,2,9,11,16",
+          id: 245,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Service is a major issue, with long wait times and rude or unhelpful staff",
+          evidence: "1,2,5,8,13,15",
+          id: 246,
+          level: 1,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Despite the issues with service and consistency, many customers still enjoy the unique Taiwanese flavors and juicy, flavorful chicken",
+          evidence: "0,3,4,6,7,10,14,17,18,19",
+          id: 247,
+          level: 1,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The sweet potato chips are a common point of criticism, with many customers finding them overcooked and bitter",
+          evidence: "0,2,11,19",
+          id: 248,
+          level: 1,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "The popularity of the restaurant has led to issues with seating availability and long wait times, particularly during peak hours",
+          evidence: "1,18",
+          id: 249,
+          level: 1,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "The quality of the chicken and customer service are the most important factors in customer satisfaction.",
+          evidence: "220,221,222,235",
+          id: 250,
+          level: 2,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Cleanliness and hygiene of the restaurant, as well as rude or unhelpful staff, are concerns for some customers.",
+          evidence: "223,227,231,233",
+          id: 251,
+          level: 2,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Consistency in food quality, customer service, and wait times are important for retaining customer loyalty.",
+          evidence: "222,225",
+          id: 252,
+          level: 2,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "The fried chicken is the standout dish and unique selling point, with a range of flavors and options.",
+          evidence: "226,239",
+          id: 253,
+          level: 2,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Long wait times and inconsistent or poor quality of bubble tea need improvement.",
+          evidence: "237,238",
+          id: 254,
+          level: 2,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "There are issues with consistency in food quality and portion size, as well as with the sweet potato chips",
+          evidence: "240,241,245,248",
+          id: 255,
+          level: 2,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Service is a major issue, with long wait times and rude or unhelpful staff",
+          evidence: "246",
+          id: 256,
+          level: 2,
+          sentiment: "negative",
+        },
+        {
+          insight:
+            "Despite these issues, customers still enjoy the unique Taiwanese flavors and juicy, flavorful chicken",
+          evidence: "247",
+          id: 257,
+          level: 2,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "The seating area is limited and the temperature inside the store can be uncomfortable, but the restaurant is popular for its late-night hours and convenient location",
+          evidence: "244",
+          id: 258,
+          level: 2,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "The chicken is highly praised for its taste and texture, with many customers preferring it over other fast food chains",
+          evidence: "243",
+          id: 259,
+          level: 2,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Customer service is a major factor in customer satisfaction and negative experiences can lead to loss of business.",
+          evidence: "200,206,215",
+          id: 260,
+          level: 2,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Consistency in taste, quality, and spice levels is important for retaining customer loyalty.",
+          evidence: "201,204,210,211,214",
+          id: 261,
+          level: 2,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Offering a variety of flavors and options, including halal and spicy dishes, can attract and cater to diverse customer preferences.",
+          evidence: "202,207",
+          id: 262,
+          level: 2,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Maintaining cleanliness, hygiene, food safety, and quality control are crucial for gaining and maintaining customer trust.",
+          evidence: "203,209",
+          id: 263,
+          level: 2,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "The fried chicken is a standout feature, praised for its taste and quality, and the fries are a popular side dish.",
+          evidence: "205,213",
+          id: 264,
+          level: 2,
+          sentiment: "positive",
+        },
+        {
+          insight:
+            "Chicken quality and customer service are crucial for customer satisfaction.",
+          evidence: "220,221,222,235,250",
+          id: 265,
+          level: 3,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Cleanliness, hygiene, and staff behavior are important concerns for customers.",
+          evidence: "223,227,231,233,251",
+          id: 266,
+          level: 3,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Consistency in food quality, customer service, and wait times is key for customer loyalty.",
+          evidence: "222,225,252",
+          id: 267,
+          level: 3,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Fried chicken is the standout dish, but bubble tea needs improvement.",
+          evidence: "226,237,238,239,254,253",
+          id: 268,
+          level: 3,
+          sentiment: "neutral",
+        },
+        {
+          insight:
+            "Customer service is crucial for customer satisfaction and loyalty.",
+          evidence: "200,206,215,246,256,260",
+          id: 269,
+          level: 3,
+          sentiment: "positive",
+        },
+      ];
+
+      let links = [];
+      for (let i = 0; i < insights.length; i++) {
+        if (insights[i].evidence.length === 0) {
+          continue;
+        }
+        let evidence = insights[i].evidence.split(",");
+        for (let j = 0; j < evidence.length; j++) {
+          let targetNode = insights.find(
+            (node) => node.id === parseInt(evidence[j])
+          );
+          if (targetNode) {
+            links.push({
+              source: insights[i],
+              target: targetNode,
+            });
+          }
+        }
+      }
+
+      const graphData = {
+        nodes: insights,
+        links: links,
+      };
+
+      const width = 800;
+      const height = 600;
+
+      const svg = d3
+        .select("body")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g");
+
+      const zoomBehavior = d3
+        .zoom()
+        .scaleExtent([0.1, 10])
+        .on("zoom", () => {
+          svg.attr("transform", d3.event.transform);
+        });
+
+      d3.select("svg").call(zoomBehavior);
+
+      //   add more force between nodes
+      const simulation = d3
+        .forceSimulation(graphData.nodes)
+        .force(
+          "link",
+          d3
+            .forceLink(graphData.links)
+            .id((d) => d.id)
+            .distance(100)
+        )
+        .force("charge", d3.forceManyBody().strength(-50))
+        .force("collide", d3.forceCollide(10))
+        .force("center", d3.forceCenter(width / 2, height / 2));
+
+      const link = svg
+        .append("g")
+        .attr("class", "links")
+        .selectAll("line")
+        .data(graphData.links)
+        .enter()
+        .append("line")
+        .attr("class", "link")
+        .attr("stroke", "black");
+
+      var div = d3
+        .select("body")
+        .append("div")
+        .attr("class", "tooltip-donut")
+        .style("opacity", 0);
+
+      function color(sentiment) {
+        if (sentiment === "positive") {
+          return "#00b300";
+        } else if (sentiment === "negative") {
+          return "#ff0000";
+        } else {
+          return "#000000";
+        }
+      }
+
+      const node = svg
+        .append("g")
+        .attr("class", "nodes")
+        .selectAll("circle")
+        .data(graphData.nodes)
+        .enter()
+        .append("circle")
+        .attr("r", (d) => 7 + 8 * d.level)
+        .attr("fill", (d) => color(d.sentiment))
+        .on("mouseover", function (d) {
+          div.style("opacity", 0.9);
+          div
+            .html("Insight: " + d.insight + "<br/>Insight Level: " + d.level)
+            .style("left", d3.event.pageX + "px")
+            .style("top", d3.event.pageY - 28 + "px");
+        });
+
+      simulation.on("tick", () => {
+        link
+          .attr("x1", (d) => d.source.x)
+          .attr("y1", (d) => d.source.y)
+          .attr("x2", (d) => d.target.x)
+          .attr("y2", (d) => d.target.y);
+
+        node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+      });
+
+      // add all insights to the bottom of the page
+      const insightsDiv = d3.select("body").append("div");
+      insightsDiv
+        .style("margin-top", "100px")
+        .selectAll("div")
+        .data(graphData.nodes)
+        .enter()
+        .append("div")
+        .text((d) => "Insight: " + d.insight + " | Insight Level: " + d.level)
+        .style("color", (d) => color(d.sentiment))
+    </script>
+  </body>
+</html>
